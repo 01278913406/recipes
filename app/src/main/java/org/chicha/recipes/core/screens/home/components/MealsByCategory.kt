@@ -33,7 +33,7 @@ import color_surface_dark
 import color_surface_light
 import org.chicha.recipes.core.navigation.Route
 import org.chicha.recipes.core.screens.home.states.MealsState
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.screens.utils.LottieAnime
 import org.chicha.recipes.core.screens.utils.SectionHeader
 import org.chicha.recipes.core.ui.theme.montserrat

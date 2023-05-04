@@ -21,7 +21,7 @@ import androidx.navigation.NavController
 import org.chicha.recipes.core.R
 import org.chicha.recipes.core.screens.home.HomeViewModel
 import org.chicha.recipes.core.screens.meals.components.SelectedMeal
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.screens.utils.LottieAnime
 import org.chicha.recipes.core.screens.utils.getActivity
 import org.chicha.recipes.core.ui.theme.montserrat

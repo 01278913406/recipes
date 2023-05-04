@@ -17,8 +17,8 @@ import org.chicha.recipes.core.screens.country.components.CountryMealsSection
 import org.chicha.recipes.core.screens.country.components.SelectedCountry
 import org.chicha.recipes.core.screens.home.HomeViewModel
 import org.chicha.recipes.core.screens.home.states.MealsState
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
-import org.chicha.recipes.core.screens.recipe.states.RecipeState
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.states.RecipeState
 import org.chicha.recipes.core.screens.utils.LottieAnime
 import org.chicha.recipes.core.ui.theme.montserrat
 import org.chicha.recipes.domain.model.Country
@@ -82,6 +82,7 @@ fun CountriesScreen(
                             fontSize = 14.sp,
                         )
                     )
+
                 }
 
             } else {

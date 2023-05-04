@@ -28,7 +28,7 @@ import coil.request.ImageRequest
 import org.chicha.recipes.core.R
 import org.chicha.recipes.core.navigation.Route
 import org.chicha.recipes.core.screens.home.HomeViewModel
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.ui.theme.montserrat
 import org.chicha.recipes.domain.model.Meal
 import kotlinx.coroutines.launch

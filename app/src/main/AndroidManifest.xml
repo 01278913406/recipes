@@ -17,6 +17,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fudie"
         tools:targetApi="31">
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3027674846091342~3607925481"/>
         <activity
             android:name="org.chicha.recipes.core.MainActivity"
             android:exported="true"

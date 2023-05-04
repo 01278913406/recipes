@@ -10,12 +10,23 @@ import androidx.compose.animation.*
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight.Companion.Bold
+import androidx.compose.ui.unit.dp
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.datastore.dataStore
@@ -34,13 +45,14 @@ import org.chicha.recipes.core.screens.ingredient.IngredientsScreen
 import org.chicha.recipes.core.screens.ingredient.SingleIngredientScreen
 import org.chicha.recipes.core.screens.meals.MealsScreen
 import org.chicha.recipes.core.screens.planner.PlannerScreen
-import org.chicha.recipes.core.screens.recipe.RecipeScreen
+import org.chicha.recipes.core.screens.country.recipe.RecipeScreen
 import org.chicha.recipes.core.screens.utils.getActivity
 import org.chicha.recipes.core.ui.theme.CookPadThem
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
 import dagger.hilt.android.AndroidEntryPoint
+import org.chicha.recipes.core.adsconfig.BannerAdView
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -48,7 +60,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CookPadThem {
-                MainScreen()
+                /* MainScreen()*/
+
+                // A surface container using the 'background' color from the theme
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = colors.background
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.Center
+                    ) {
+                        BannerAdView()
+                    }
+                }
             }
         }
     }
@@ -57,7 +82,7 @@ class MainActivity : ComponentActivity() {
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalAnimationApi::class)
 @Composable
-fun MainScreen(){
+fun MainScreen() {
     val context = LocalContext.current
     val activity = context.getActivity()
     val window = activity?.window
@@ -87,7 +112,6 @@ fun MainScreen(){
             Route.FavouritesScreen.route -> true
             else -> false
         }
-
         Scaffold(
             bottomBar = {
                 if (showBottomBar) {
@@ -154,7 +178,7 @@ private fun NavGraphBuilder.screens(navController: NavController) {
             slideOutHorizontally(
                 animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
                 targetOffsetX = {
-                  -  it
+                    -it
                 }
             )
         }) {
@@ -170,7 +194,7 @@ private fun NavGraphBuilder.screens(navController: NavController) {
         }) {
         CountriesScreen(navController)
     }
-    
+
 
     composable(route = Route.MealsScreen.route + "/{category_name}",
         enterTransition = {
@@ -193,14 +217,14 @@ private fun NavGraphBuilder.screens(navController: NavController) {
             slideOutHorizontally(
                 animationSpec = spring(stiffness = Spring.StiffnessMediumLow),
                 targetOffsetX = {
-                    -  it
+                    -it
                 }
             )
         }) {
         CategoriesScreen(navController)
     }
 
-    composable(route = Route.SingleIngredientsScreen.route +"/{ingredient_name}",
+    composable(route = Route.SingleIngredientsScreen.route + "/{ingredient_name}",
         enterTransition = {
             fadeIn(animationSpec = spring(stiffness = Spring.StiffnessMediumLow))
         },

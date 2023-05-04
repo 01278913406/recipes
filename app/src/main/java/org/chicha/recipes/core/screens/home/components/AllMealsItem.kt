@@ -23,7 +23,7 @@ import coil.compose.AsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
 import org.chicha.recipes.core.navigation.Route
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.ui.theme.montserrat
 import org.chicha.recipes.domain.model.Meal
 import kotlinx.coroutines.launch

@@ -21,7 +21,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.SubcomposeAsyncImage
 import coil.request.CachePolicy
 import coil.request.ImageRequest
-import org.chicha.recipes.core.screens.recipe.states.RecipeState
+import org.chicha.recipes.core.screens.country.recipe.states.RecipeState
 import org.chicha.recipes.core.screens.utils.LottieAnime
 import org.chicha.recipes.core.ui.theme.montserrat
 import org.chicha.recipes.core.R

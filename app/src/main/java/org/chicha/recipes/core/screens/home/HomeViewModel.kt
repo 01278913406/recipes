@@ -9,7 +9,7 @@ import org.chicha.recipes.common.util.Resource
 import org.chicha.recipes.core.screens.home.states.IngredientsState
 import org.chicha.recipes.core.screens.home.states.MealCategoriesState
 import org.chicha.recipes.core.screens.home.states.MealsState
-import org.chicha.recipes.core.screens.recipe.states.RecipeState
+import org.chicha.recipes.core.screens.country.recipe.states.RecipeState
 import org.chicha.recipes.domain.use_cases.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

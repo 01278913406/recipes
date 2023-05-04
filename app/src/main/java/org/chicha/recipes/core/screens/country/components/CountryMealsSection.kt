@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import org.chicha.recipes.core.screens.home.HomeViewModel
 import org.chicha.recipes.core.screens.home.states.MealsState
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 
 @Composable
 fun CountryMealsSection(

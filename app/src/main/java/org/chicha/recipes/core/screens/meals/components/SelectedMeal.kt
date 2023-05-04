@@ -32,7 +32,7 @@ import color_primary_light
 import color_surface_light
 import org.chicha.recipes.core.R
 import org.chicha.recipes.core.navigation.Route
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.screens.utils.SectionHeader
 import org.chicha.recipes.core.ui.theme.montserrat
 import org.chicha.recipes.domain.model.Meal

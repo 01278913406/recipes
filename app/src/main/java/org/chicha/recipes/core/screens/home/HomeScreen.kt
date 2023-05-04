@@ -21,7 +21,7 @@ import androidx.navigation.NavController
 import org.chicha.recipes.core.R
 import org.chicha.recipes.core.screens.home.components.*
 import org.chicha.recipes.core.screens.home.states.MealsState
-import org.chicha.recipes.core.screens.recipe.RecipeViewModels
+import org.chicha.recipes.core.screens.country.recipe.RecipeViewModels
 import org.chicha.recipes.core.screens.utils.LottieAnime
 import org.chicha.recipes.core.ui.theme.WindowSizeClass
 import org.chicha.recipes.core.ui.theme.montserrat
@@ -81,6 +81,7 @@ fun HomeScreen(
                 )
             }
         }
+
     )
 }
 
